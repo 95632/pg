@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñadores</title>
+    <link rel="stylesheet" href="fontello.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.945) ;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .contenedor{
+            width: 98%;
+            margin: auto;
+            
+        }
+        #menu-bar{
+            display: none;
+        }
+        header label{
+            float: right;
+            font-size: 28px;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+        h1{
+            float: left;
+        }
+        .menu{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(51,51,51,0.9);
+            transition: all 0.5s;
+            transform: translateX(-100%);
+        }
+        header .contenedor{
+            display: table;
+        }
+        .menu a{
+            display: block;
+            color: white;
+            height: 50px;
+            text-decoration: none;
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .menu a:hover{
+            background: 1px solid rgba(255,255,255,0.3);
+        }
+        #menu-bar:checked ~ .menu{
+            transform: translateX(0%);
+        }
+        section{
+            width: 100%;
+            margin: 25px;
+        }
+        #banner{
+            margin-top: 50px;
+            position: relative;
+            
+        }
+        #banner img{
+            width: 100%;
+            height: 100%;
+        }
+        #banner .contenedor{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: white;
+
+        }
+        #banner h2{
+            font-size: 28px;
+        }
+        #banner a{
+            display: block;
+            width: 100px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-top: 10px;
+            border: 3px solid white;
+        }
+        #banner a:hover{
+            background: rgba(51,51,51,0.3);
+        }
+        #bienvenido{
+            text-align: center;
+        }
+        #blog h3, h4{
+            text-align: center;
+        }
+        #blog .contenedor{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #blog article{
+            margin: 15px;
+        }
+        #blog img{
+            width: 100%;
+            max-width: 280px;
+        }
+        #info{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .info-design{
+            margin: 20px;
+        }
+        .info-design img{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        @media (min-width:1024px){
+            .menu{
+                position: static;
+                width: auto;
+                height: auto;
+                transform: translateX(0%);
+                float: right;
+                display: flex;
+            }
+            header label{
+                display: none;
+            }
+            .menu a{
+                border: none;
+            }
+        }
+        @media (min-width:1024px){
+            .contenedor{
+                width: 1000px;
+                
+            }
+        }
+        @media (min-width:480px){
+            #banner h2{
+                font-size: 40px;
+            }
+            #banner a{
+                margin-top: 25px;
+            }
+        }
+        @media (min-width:768px){
+            #banner{
+                height: 300px;
+                overflow: hidden;
+            }
+            #banner img{
+                height: auto;
+                margin-top: -100px;
+            }
+        }
+        @media (min-width:1024px){
+            
+            #banner img{
+                
+                margin-top: -200px;
+            }
+        }
+        @media (min-width:480px){
+            .info-design{
+                width: 40%;
+            }
+        }
+        @media (min-width:1024px){
+            .info-design{
+                width: auto;
+            }
+        }
+        .git{
+            width:60px;
+            height: auto;
+            
+        }
+        .c2{
+           
+            font-size: 60px;
+        }
+        .d1{
+            border-radius: 20px;
+            width: 300px;
+            height: auto;
+            float: left;
+            margin-top: 80px;
+            border:10px solid rgb(3, 27, 46);
+            margin-right: 30px;
+            margin-left:0px;
+        }
+        .d2{
+            border-radius: 20px;
+            width: 300px;
+            height: auto;
+            float: left;
+            margin-top: 80px;
+            border:10px solid rgb(3, 27, 46);
+            margin-right: 30px;
+        }
+        .d3{
+            border-radius: 20px;
+            width: 300px;
+            height: auto;
+            float: left;
+            margin-top: 80px;
+            border:10px solid rgb(3, 27, 46);
+            margin-right: 30px;
+        }
+        .d4{
+            border-radius: 20px;
+            width: 300px;
+            height: 450px;
+            float: left;
+            margin-top: 80px;
+            border:10px solid rgb(3, 27, 46);
+            margin-right: 0px;
+        }
+   
+    .n1{
+        display: block;
+        margin-left: 20px;
+    }
+    body{
+        background-color: rgb(255, 244, 244);
+    }
+    
+    </style>
+</head>
+<body >
+    <header>
+       <div class="contenedor">
+           <h1><img class="git" src="https://www.logo.wine/a/logo/GitHub/GitHub-Icon-White-Dark-Background-Logo.wine.svg">Diseñadores</h1>
+           <input type="checkbox" id="menu-bar">
+           <label class="icon-th-list"for="menu-bar"></label>
+           <nav class="menu">
+               <a href="https://josemaromero46.github.io/pagina_grupo/">Inicio</a>
+               <a href="">Diseñadores</a>
+               <a href="https://josemaromero46.github.io/pagina_grupo/blog.html">Blog</a>
+               <a href="https://josemaromero46.github.io/pagina_grupo/contacto.html">Contacto</a>
+           </nav>
+       </div>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            <div class="contenedor">
+              <h1 class="c2">Nuestros Contáctos</h1>
+              <br> <br> <br> <br>
+              <a href="#">Leer más</a>
+            </div>
+        </section>
+        <section id="bienvenido">
+            <h2>Nuestros mejores deseñadores web</h2>
+            <p>Diseñadores capacitados, egresados de las mejores universidades del pais
+            </p>
+        </section>
+        <section id="blog">
+            <h3><strong>CAMPOS</strong></h3>
+            <div class="contenedor">
+                <article>
+                    <img src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                    <h4>Para negocios</h4>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                    <h4>Páginas personales</h4>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/285814/pexels-photo-285814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                    <h4>Para centros públicos</h4>
+                </article>
+            </div>
+        </section>
+        <section >
+            <div >
+                <div><a href="#"><img class="d1" src="https://static.scholar.harvard.edu/files/styles/os_files_xlarge/public/maskin/files/photograph_of_e_maskin2.jpg?m=1517498115&itok=h2v8k48-"></a></div>
+                <div><a href="#"><img class="d2" src="https://i.pinimg.com/originals/18/23/6c/18236c122583aa65cece65c1f9107449.jpg"></a></div>
+                <div><a href="#"><img class="d3" src="https://aws.revistavanityfair.es/prod/designs/v1/assets/667x1000/53139.jpg"></a></div>
+                <div><a href="#"><img class="d4" src="https://i.pinimg.com/originals/3a/b2/6c/3ab26ca6cd7b318a99453b4c665a5a2c.jpg"></div>
+                </a></div>
+        </section>
+    </main>
+    
+</body>
+</html>
